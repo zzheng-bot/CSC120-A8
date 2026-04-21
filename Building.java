@@ -3,25 +3,21 @@ public class Building {
     protected String name;
     protected String address;
     protected int nFloors;
-    protected int activeFloor = -1; // Default value indicating we are not inside this building
+    protected int activeFloor = -1; 
 
-    /* Default constructor */
     public Building() {
         this("<Name Unknown>", "<Address Unknown>", 1);
     }
 
-    /* Overloaded constructor with address only */
     public Building(String address) {
-        this(); // Call default constructor
-        this.address = address; // Override address
+        this(); 
+        this.address = address; 
     }
 
-    /* Overloaded constructor with name, address */
     public Building(String name, String address) {
-        this(name, address, 1); // Call full constructor with hard-coded # floors
+        this(name, address, 1); 
     }
 
-    /* Full constructor */
     public Building(String name, String address, int nFloors) {
         if (name != null) { this.name = name; }
         if (address != null) { this.address = address; } 
@@ -31,7 +27,6 @@ public class Building {
         this.nFloors = nFloors;
     }
 
-    /* Accessors */
     public String getName() {
         return this.name;
     }
@@ -44,14 +39,13 @@ public class Building {
         return this.nFloors;
     }
 
-    /* Navigation methods */
     public Building enter() {
         if (activeFloor != -1) {
             throw new RuntimeException("You are already inside this Building.");
         }
         this.activeFloor = 1;
         System.out.println("You are now inside " + this.name + " on the ground floor.");
-        return this; // Return a pointer to the current building
+        return this; 
     }
 
     public Building exit() {
@@ -62,8 +56,8 @@ public class Building {
             throw new RuntimeException("You have fallen out a window from floor #" +this.activeFloor + "!");
         }
         System.out.println("You have left " + this.name + ".");
-        this.activeFloor = -1; // We're leaving the building, so we no longer have a valid active floor
-        return null; // We're outside now, so the building is null
+        this.activeFloor = -1; 
+        return null; 
     }
 
     public void goToFloor(int floorNum) {
