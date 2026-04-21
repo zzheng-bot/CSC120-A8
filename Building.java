@@ -110,5 +110,4 @@ public class Building {
         fordHall.goDown();
         fordHall.exit();
     }
-
 }

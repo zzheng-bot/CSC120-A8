@@ -4,4 +4,5 @@ interface HouseRequirements {
     void moveIn(Student s);
     Student moveOut(Student s); 
     boolean isResident(Student s); 
+    boolean hasElevator();
 }

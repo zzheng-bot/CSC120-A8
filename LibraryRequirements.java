@@ -1,5 +1,5 @@
 interface LibraryRequirements {
-
+    boolean hasElevator();
     void addTitle(String title);
     String removeTitle(String title); 
     void checkOut(String title);
