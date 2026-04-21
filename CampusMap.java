@@ -83,8 +83,8 @@ public class CampusMap {
         campusCafe.showOptions();
 
         campusCafe.enter();
-        campusCafe.goToFloor(2); // blocked
-        campusCafe.goToFloor(1); // allowed
+        campusCafe.goToFloor(2); 
+        campusCafe.goToFloor(1); 
 
         System.out.println("All demos completed successfully!");
     }
